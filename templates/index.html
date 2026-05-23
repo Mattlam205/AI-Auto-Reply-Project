@@ -5,19 +5,41 @@
     <title>AI Chatbot</title>
 </head>
 
-<body>
+<body style="background-color:black;">
 
-    <h1>My AI Chatbot</h1>
+    <div style="text-align: center;">
+      <h1 style="color:white;"> MY AI Chatbot</h1>
+    </div>
+    
+    </body> 
+    
+    <div style="
+    position: fixed;
+    bottom: 20px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    ">
+      <form method="POST">
 
-    <form method="POST">
+          <input type="text" name="message" placeholder = "Ask me anything..." style="width: 500px; height: 35px;">
 
-        <input type="text" name="message">
-
-        <button type="submit">
+          <button type="submit" style="height: 40px;">
             Send
-        </button>
+          </button>
 
-    </form>
+      </form>
+    </div>
+
+    <div style="text-align:right;">
+      <h2 style="color:white;"> You: </h2>
+      <p style="color:white;"> {{ user_message }}</p>
+    </div> 
+    
+    <div style="text-align:left;">
+      <h2 style="color:white;"> AI Response:</h2>
+      <p style="color:white;">{{ ai_response }}</p>
+    </div>
 
 </body>
 
